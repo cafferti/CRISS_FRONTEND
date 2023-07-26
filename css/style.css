@@ -1,0 +1,88 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    max-width: 100%;
+    background: #141627;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+#container{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    max-width: 60%;
+    padding: 40px;
+}
+#tomato .egg{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+input.hand{
+    background: #181B22;
+    color:  rgba(248, 241, 241, 0.7);
+    width:700px ;
+    height: 80px;
+    border-radius: 15px;
+    border: 1px solid #4A4B52;
+    Padding: 0px 20px;
+    margin-top: 5%;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+
+     /* margin-top: 30px; */
+}
+button{
+    color:  rgba(248, 241, 241, 0.7);
+    width: 300px;
+    height: 80px;
+    border-radius: 15px;
+    /* padding: 0px, 20px, 0px, 20px; */
+    background:#181B22 ;
+    margin-top: 30px;
+    margin-left: 200px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    
+}
+.box{
+    background: url(/image/Vector.png) no-repeat;
+    background-size: auto;
+    transform: rotate(-0.12deg);
+    width: 50%;
+    height: 100%; 
+    position: absolute;
+    margin-left: 27%;
+}
+.egg{
+    position: relative;
+}
+/* input.hand{
+    padding: 30px 5px 5px 5px;
+    width: 100%;
+    border: 1px solid #555;
+} */
+label.hand-label{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 12px;
+    color:#606169;
+    margin-top: 5%;
+}
+
+h1{
+    margin-top: 5%;
+    font-size: 50px;
+}
+a{
+    text-decoration: none;
+}

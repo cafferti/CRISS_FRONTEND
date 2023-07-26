@@ -1,0 +1,53 @@
+body{
+    max-width: 100%;
+    height: 100%;
+    background: #141627;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+.parent{
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+img{
+    position: relative;
+    border-radius:50%;
+    width: 120px;
+    top: 0;
+    left: 0;
+}
+.wolf{
+    position: absolute;
+}
+.logo{
+    width: 30rem;
+    border-radius: 0%;
+    margin-left: 26rem;
+    top: 0px;
+}
+
+.bee{
+    text-align: center;
+    font-size: 20px;
+}
+.gee{
+    text-align: center;
+}
+.ree:hover{
+    display:none ;
+}
+.zee{
+
+}
+a{
+    text-decoration: none;
+    color: #f9f3f3;
+}
+.lee:hover{
+    font-size: larger;
+    color: #dbd8d8;
+    font-weight: 700;
+}

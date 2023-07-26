@@ -1,0 +1,146 @@
+
+:root{
+    /* Color primary */
+    
+    
+    /* primary */
+    
+    --Grayish-Blue:rgba(20, 22, 39, 1);
+    --Light-Grayish-Blue: rgba(96, 97, 105, 0.11);
+    ;
+    --bright-Light-blue: rgba(3, 14, 39, 1);
+    ;
+    
+     }
+    body{
+      background-color: var(--bright-Light-blue);
+      color:white;
+    }
+input{
+    color: white;
+    text-align: left;
+    margin-bottom: 10px;
+    padding-right: 26rem;
+    padding-left: 2rem;
+    padding-block: 0.7rem;
+    border-radius: 0.3rem;
+    font-size: 18px;
+    border: none;
+    background-color: var(--Grayish-Blue);
+  }
+
+  .long-input{
+    padding-block: 3rem !important;
+  }
+  label{
+    display: none;
+  }
+
+  .article {
+    background: var(--bright-Light-blue);
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 69%;
+    padding-left: 5%;
+    height: 100%;
+    flex-grow: 1;
+    
+  }
+  
+  .article.active {
+    background-color: var(--bright-Light-blue);
+    display: block;
+    width: 60%;
+    margin-left: ;
+    margin-block: 2rem;
+    
+  }
+  
+  main{
+    
+  }
+  
+  .slide-out-left {
+    animation: slideOutLeft 0.5s forwards;
+  }
+  
+  .slide-in-right {
+    animation: slideInRight 0.5s forwards;
+  }
+  
+  @keyframes slideOutLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  /* sliding effect of forms */
+  @keyframes slideInRight {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0); }
+  }
+  
+  .slide-out-right {
+    animation: slideOutRight 0.5s forwards;
+  }
+  
+  .slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+  }
+  
+  @keyframes slideOutRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+  }
+  
+  @keyframes slideInLeft {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  .arrow{
+    margin-left: 45rem;
+    margin-top: -3rem;
+    background-color: var(--bright-Light-blue);
+  }
+
+  .arrow button ,.arrow-back button{
+    background-color: var(--bright-Light-blue);
+    border: none;
+  }
+
+  .arrow-back{
+    background-color: var(--bright-Light-blue);
+  }
+  .arrow-back{
+    background-color: var(--bright-Light-blue);
+    margin-left: -3rem;
+  }
+
+  
+
+  h1 ,h2{
+    padding: 15px;
+    margin: 1px;
+    font-size: 20px;
+  }
+
+  h2{
+    padding: 0px;
+    margin: 0px;
+    font-size: 18px;
+  }
+  .short-input{
+    width: 0.5rem;
+    margin: 3px;
+    padding-right: 3rem;
+    margin-top: 1.3rem;
+    margin-left: -5rem;
+    margin-inline: 2rem;
+  }
+
+  .short-labels{
+    margin-right: -5rem;
+    display: block;
+  }
+
+  

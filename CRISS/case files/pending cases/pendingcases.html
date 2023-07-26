@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <link rel="stylesheet" href="../casefiles.css">
+</head>
+<body style="margin: 0;">
+  <div id="sidebar">
+    <div id="sideprofile"  class="sidebar-head">
+      <img class="image1-container" src="/CRISS/images/criss-logo.svg" alt="Image 1">
+      <div class="image2-container">
+        <img src="/CRISS/images/inspector.svg" alt="Image 2">
+        <p style=" margin: 0;">WELCOME! <br> inspector Barbara</p>
+      </div>
+      
+    </div>
+    <!-- Sidebar content goes here -->
+    <a href="../../../../dashboard.html">
+      <img src="/CRISS/images/dashboard.svg" alt="Image 1">
+      Dashboard
+    </a>
+    <a class="rescentcases" href="#">
+      <img src="/CRISS/images/casefile.png" alt="Image 2">
+      Case files
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/stats.png" alt="Image 3">
+      Statistics
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/investigationnote.svg" alt="Image 4">
+      Investigation note
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/notification.svg" alt="Image 5">
+      Notification
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/livestream.svg" alt="Image 6">
+      Live stream feed
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/watchguard.svg" alt="Image 7">
+      Watch guard
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/wanted.svg" alt="Image 8">
+      Wanted List
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/evidence.svg" alt="Image 9">
+      Evidence Management
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/settings.svg" alt="Image 10">
+      Settings
+    </a>
+
+    <div style="text-align: center;" id ="logup">
+      <p>Are you sure you want to log out?</p>
+      <div style="display: flex; justify-content: center; text-align: center;" class="logop">
+      <a href="">YES</a> <a href="">NO</a>
+    </div>
+    </div>
+
+    <button onclick="active()" id="logout">log out</butto>
+   
+  </div>
+
+  
+
+  <section style="display: flex;" id="content">
+    <!-- Main content goes here -->
+      <div id="new-sidebar" class="image-container">
+      <a href="">  <img src="/CRISS/images/dashboard.svg" alt="Image 1"> </a>
+      <a href="">  <img src="/CRISS/images/casefile.png" alt="Image 3"> </a>
+      <a href="">  <img src="/CRISS/images/stats.png" alt="Image 4"> </a>
+      <a href="">  <img src="/CRISS/images/investigationnote.svg" alt="Image 5"> </a>
+      <a href="">  <img src="/CRISS/images/notification.svg" alt="Image 6"> </a>
+      <a href="">  <img src="/CRISS/images/livestream.svg" alt="Image 7"> </a>
+      <a href="">  <img src="/CRISS/images/watchguard.svg" alt="Image 8"> </a>
+      <a href=""> <img src="/CRISS/images/wanted.svg" alt="Image 9">
+      <a href="">  <img src="/CRISS/images/evidence.svg" alt="Image 10"> </a>
+      <a href="">  <img src="/CRISS/images/settings.svg" alt="" srcset=""> </a>
+      </div>
+  
+
+    <main style="flex-grow: 1;">
+    
+      <header>
+        <div class="container">
+
+            <div class="image-container">
+                <img src="/CRISS/images/Vector (9).svg" alt="Your Image" />
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search..." />
+                <img src="/CRISS/images/Vector.svg" alt="Placeholder Image" />
+            </div>
+           
+        </div>
+    
+
+
+    <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Pending Cases<span class="arrow">&#9660;</span></button>
+        <div class="dropdown-content">
+          <a href="../recentcases/recentcases.html">Rescentcases</a>
+          <a href="../all cases/Allcases.html">All cases</a>
+          <a href="../appeal/appeal.html">Appeal</a>
+          <a href="../closed cases/closedcases.html">closed cases</a>
+          <a href="../under investigatian/underinvestigation.html">Under Investigation</a>
+          <a href="../cold cases/coldcases.html">Cold Cases</a>
+        </div>
+      </div>
+    </header>
+      
+      
+    
+   
+</head>
+  <table>
+   
+    <tr>
+      <th colspan="1">S/N</th>
+      <th colspan="3">Name</th>
+      <th colspan="3">Case No</th>
+      <th colspan="2">Date</th>
+      <th colspan="2">Case Type</th>
+      <th colspan="1">Status</th>
+    </tr>
+       
+    <tr>
+      <td colspan="1">001</td>
+      <td colspan="3"><a href="">Samko Badung</a></td>
+      <td colspan="3">123440A</td>
+      <td colspan="2">2023-06-23</td>
+      <td colspan="2">Civil</td>
+      <td colspan="1">Closed</td>
+    </a>
+    </tr>
+
+    <tr>
+    <a href="#">
+      <td colspan="1">002</td>
+      <td colspan="3"> <a href="">George Umar</a> </td>
+      <td colspan="3">123450A</td>
+      <td colspan="2">2023-06-23</td>
+      <td colspan="2">Robbery</td>
+      <td colspan="1">Open</td>
+    </a>
+    </tr>
+
+    <tr>
+    <a href="#">
+      <td colspan="1">003</td>
+      <td colspan="3"><a href="">George Umar</a></td>
+      <td colspan="3">123470A</td>
+      <td colspan="2">2023-06-23</td>
+      <td colspan="2">Civil</td>
+      <td colspan="1">Open</td>
+    </a>
+    </tr>
+
+    <tr>
+      <a href="#">
+        <td colspan="1">004</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </a>
+        </tr>
+
+        <td colspan="1">005</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </a>
+        </tr>
+
+        <td colspan="1">006</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </a>
+        </tr>
+
+        <td colspan="1">007</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </a>
+
+        </tr>
+        <td colspan="1">008</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </a>
+        </tr>
+
+        <td colspan="1">009</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </tr>
+        <td colspan="1">010</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </tr>
+        <td colspan="1">011</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </tr>
+        <td colspan="1">012</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </tr>
+        <td colspan="1">013</td>
+          <td colspan="3"></td>
+          <td colspan="3"></td>
+          <td colspan="2"></td>
+          <td colspan="2"></td>
+          <td colspan="1"></td>
+        </tr>
+
+    <!-- Add more rows with data as needed -->
+   </table>
+  <section/>
+</main>
+ 
+</html>
+
+  <script src="../casefiles.js"></script>
+</body>
+</html>
+
+    
+ 

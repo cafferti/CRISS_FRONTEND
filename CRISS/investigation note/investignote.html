@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<>
+<head>
+  
+  
+  <link rel="stylesheet" href="../case files/casefiles.css">
+  <link rel="stylesheet" href="../investignote.css">
+</head>
+<body style="margin: 0;">
+  <div id="sidebar">
+    <div id="sideprofile"  class="sidebar-head">
+      <img class="image1-container" src="/CRISS/images/criss-logo.svg" alt="Image 1">
+      <div class="image2-container">
+        <img src="/CRISS/images/inspector.svg" alt="Image 2">
+        <p style=" margin: 0;">WELCOME! <br> Inspector Ali</p>
+      </div>
+      
+    </div>
+    <!-- Sidebar content goes here -->
+    <a href="../../../../dashboard.html">
+      <img src="/CRISS/images/dashboard.svg" alt="Image 1">
+      Dashboard
+    </a>
+    <a  href="../case files/all cases/Allcases.html">
+      <img src="/CRISS/images/casefile.png" alt="Image 2">
+      Case files
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/stats.png" alt="Image 3">
+      Statistics
+    </a>
+    <a class="rescentcases" href="#">
+      <img src="/CRISS/images/investigationnote.svg" alt="Image 4">
+      Investigation note
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/notification.svg" alt="Image 5">
+      Notification
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/livestream.svg" alt="Image 6">
+      Live stream feed
+    </a>
+    <a href="/watch guard/watch-guard.html">
+      <img src="/CRISS/images/watchguard.svg" alt="Image 7">
+      Watch guard
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/wanted.svg" alt="Image 8">
+      Wanted List
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/evidence.svg" alt="Image 9">
+      Evidence Management
+    </a>
+    <a href="#">
+      <img src="/CRISS/images/settings.svg" alt="Image 10">
+      Settings
+    </a>
+
+    <div style="text-align: center;" id ="logup">
+      <p>Are you sure you want to log out?</p>
+      <div style="display: flex; justify-content: center; text-align: center;" class="logop">
+      <a href="">YES</a> <a href="">NO</a>
+    </div>
+    </div>
+
+    <button onclick="active()" id="logout">log out</butto>
+   
+  </div>
+
+  
+
+  <section style="display: flex;" id="content">
+    <!-- Main content goes here -->
+      <div id="new-sidebar" class="image-container">
+      <a href="">  <img src="/CRISS/images/dashboard.svg" alt="Image 1"> </a>
+      <a href="">  <img src="/CRISS/images/casefile.png" alt="Image 3"> </a>
+      <a href="">  <img src="/CRISS/images/stats.png" alt="Image 4"> </a>
+      <a href="">  <img src="/CRISS/images/investigationnote.svg" alt="Image 5"> </a>
+      <a href="">  <img src="/CRISS/images/notification.svg" alt="Image 6"> </a>
+      <a href="">  <img src="/CRISS/images/livestream.svg" alt="Image 7"> </a>
+      <a href="">  <img src="/CRISS/images/watchguard.svg" alt="Image 8"> </a>
+      <a href=""> <img src="/CRISS/images/wanted.svg" alt="Image 9">
+      <a href="">  <img src="/CRISS/images/evidence.svg" alt="Image 10"> </a>
+      <a href="">  <img src="/CRISS/images/settings.svg" alt="" srcset=""> </a>
+      </div>
+  
+
+     <main style="flex-grow: 1;">
+
+  <form id="myForm">
+
+    <article  class="article active">
+      <h2 style="margin-inline: 30%; padding-bottom: 20px;">Case Input</h2>
+      
+      <div class="firstspart">
+        <h2 style="padding-inline: 30%;">case information</h2>
+        <label for="case-ref-number">case reference number</label><br>
+        <input type="text" id="case-ref-number" placeholder="case reference Number"><br>
+
+       <label for="Date">Date</label><br>
+       <input type="date" id="Date" placeholder="date"><br>
+
+       <label for="incident-type">Incident Type</label><br>
+       <input type="text" id="incident-type" placeholder="Incident Type"><br>
+
+       <label for="incident-des">Incident Description</label><br>
+       <input class="long-input" type="text" id="incident-des" placeholder="Incident Description"><br>
+
+       <label for="reporting-officer">Reporting officer</label><br>
+       <input type="text" id="reporting-officer" placeholder="Reporting officer"><br>
+    </div>
+
+    <div class="secondpart">
+      <h2 style="padding-inline: 30%;">Reporting Party Information</h2>
+     <label for="name">Name</label><br>
+     <input type="text" id="name" placeholder="name"><br>
+
+     <label for="contact">Contact</label><br>
+     <input type="text" id="contact" placeholder="contact/email address" ><br>
+
+     <label for="address">Address</Address></label><br>
+     <input type="text" id="address" placeholder="Address"><br>
+
+     <label for="statement">Statement</label><br>
+     <input class="long-input" type="text" id="statement" placeholder="statement"><br>
+  </div>
+
+      <div class="arrow">
+        <button class="next" type="button" onclick="nextArticle()"><img src="/CRISS/images/Frame 155.svg" alt=""></button>
+      </div>
+    </article>
+
+    <article class="article">
+      <h1 style="margin-inline: 30%;">Case Input</h1>
+      <div class="firstpart">
+       <h2>Victim Information</h2>
+       <label for="name">Name</label><br>
+       <input type="text" id="name" placeholder="name"><br>
+
+      <label for="contact">Contact</label><br>
+      <input type="text" id="contact" placeholder="contact/email address" ><br>
+
+      <label for="address">Address</Address></label><br>
+      <input type="text" id="address" placeholder="Address"><br>
+
+      <label for="statement">Statement</label><br>
+      <input class="long-input" type="text" id="statement" placeholder="statement"><br>
+    </div>
+    <div class="secondpart">
+      <h2>suspect information</h2>
+      <label for="name">Name</label><br>
+       <input type="text" id="name" placeholder="name"><br>
+
+      <label for="contact">Contact</label><br>
+      <input type="text" id="contact" placeholder="contact/email address" ><br>
+
+      <label for="address">Address</Address></label><br>
+      <input type="text" id="address" placeholder="Address"><br>
+
+      <div style="display: flex;" class="measurement">
+        <label class="short-labels" for="height">Height</label><br>
+        <input class="short-input" id="height" type="text"><br>
+
+       <label class="short-labels" for="eye-color">eye color</label><br>
+       <input class="short-input" type="text"><br>
+
+       <label class="short-labels" for="DOB">DoB</label><br>
+       <input class="short-input"id="DOB" type="text"><br>
+       
+       <label class="short-labels" for="suspect-image">Upload image</label><br>
+       <input class="short-input"id="suspect-image" type="text"><br>
+      </div>
+      <label  for="additional-info">Additional information</label><br>
+        <input id="additional-info" type="text" placeholder="Additional Information" ><br>
+
+
+    </div>
+      <!-- ...labels and inputs for the second group... -->
+      <div class="arrow-back"><button type="button" onclick="prevArticle()"><img src="/CRISS/images/Frame 137 .svg" alt=""></button></div>
+      
+      <div class="arrow"> <button class="next" type="button" onclick="nextArticle()"><img src="/CRISS/images/Frame 155.svg" alt=""></button></div>
+     
+    </article>
+
+    <article class="article">
+      <h1 style="margin-inline: 30%;">Case Input</h1>
+     <div class="firstpart">
+      <h2>witness Information</h2>
+      <label for="name">Name</label><br>
+       <input type="text" id="name" placeholder="name"><br>
+
+      <label for="contact">Contact</label><br>
+      <input type="text" id="contact" placeholder="contact/email address" ><br>
+
+      <label for="address">Address</Address></label><br>
+      <input type="text" id="address" placeholder="Address"><br>
+
+      <label for="statement">Statement</label><br>
+      <input class="long-input" type="text" id="statement" placeholder="statement"><br>
+     </div>
+
+     <div class="secondpart">
+
+      <h2 style="padding-block: 1rem;"> Evidence</h2>
+      <label for="des-evidence">Description of Evidence </label>
+      <input class="long-input" type="des-evidence" placeholder="Evidence Description">
+
+      <label class="short-labels" style="margin-bottom: 0px;" for="evidence-files">Upload Evidence Files</label>
+      <input class="short-input" type="evidence-files">
+
+      <label   for="additional-info">Additional information</label><br>
+      <input class="long-input" style="margin-top: 2rem;" id="additional-info" type="text" placeholder="Additional Information" ><br>
+
+
+     </div>
+      <button class="arrow-back" style="margin-top: 0rem;border: none;" type="button" onclick="prevArticle()"><img src="/CRISS/images/Frame 137 .svg" alt=""></button>
+      <button style="margin-top: 2rem;margin-left: 13rem; border: none;background-color: rgba(20, 22, 39, 1);color: white;font-size: 16px; padding-block: 1.2rem; padding-inline: 0.5rem; border-radius: 3px;margin-bottom: 2rem; " type="submit">Upload Case Information</button> 
+    </article>
+   
+    
+    </form>
+        
+     </main>
+</section>
+ 
+
+  <script src="../case files/casefiles.js"></script>
+  <script src="../investignote.js"></script>
+
+</body>
+</html>
+
+    
+ 
