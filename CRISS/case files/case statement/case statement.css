@@ -284,7 +284,7 @@
   #sidebar #logout{
     width: 100%;
     margin-bottom: 0;
-    margin-top: 4rem;
+    margin-top: 1rem;
   
     text-align: center;
     border: solid 1px rgb(2, 17, 24);
@@ -353,12 +353,14 @@
   }
     /* update butn styling */
   .update{
+    text-align: center;
     margin-top: 3rem;
     background-color: var(--Grayish-Blue);
     margin-inline: 40%;
     border-radius: 0.5rem;
     padding-block: 0.3rem;
     justify-content: space-around;
+    padding-right: 1rem;
   }
    
   /* view file btn stylin */

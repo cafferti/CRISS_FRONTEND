@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/notification.css">
+    <link rel="stylesheet" href="/CRISS/Notification/Styles/notification.css">
     <title>CRISS - Notification(s)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,14 +83,14 @@
     </section>
 
     <section>
-        <p style="position: absolute; left: 30.3%; bottom: 530px; font-size: 14.5px;">Case Reference Number</p>
+        <p style="position: absolute; left: 30.3%; bottom: 530px; font-size: 14.5px;">Number</p>
         <input class="CRN" type="text" placeholder="892746B"> 
         <p style="position: absolute; left: 30.3%;  bottom: 460px; font-size: 14.5px;">Date</p>
         <input class="date" type="text" placeholder="20 / 04 / 2023">
         <p style="position: absolute; left: 30.3%; bottom: 390px; font-size: 14.5px;">Notifying Officer</p>
         <input class="N-officer" type="text" placeholder=""> 
         <p style="position: absolute; left: 30.3%; bottom: 320px; font-size: 14.5px;">Notification Recipient</p>
-        <input class="notification-recipient" type="text" placeholder="Station Number">
+        <input class="notification-recipient" type="text" placeholder="Station Number">Case Reference 
         <p style="position: absolute; left: 30.3%; bottom: 255px; font-size: 14.5px;">Incident Description</p>
         <input class="inc-description" type="text" placeholder="">
         <p style="position: absolute; left: 30.3%; bottom: 190px; font-size: 14.5px;">Notification Type</p>
@@ -104,3 +104,211 @@
         <a href=""><button class="uploadevidence">Upload Evidence</button></a>
 </body>
 </html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head> 
+  
+  
+  <link rel="stylesheet" href="../watch guard/watch-guard.css">
+</head>
+<body style="margin: 0;">
+  <div id="sidebar">
+    <div id="sideprofile"  class="sidebar-head">
+        <img class="image1-container" src="../images/criss-logo.svg" alt="Image 1">
+        <div class="image2-container">
+          <img src="../images/inspector.svg" alt="Image 2">
+          <p style=" margin: 0;">WELCOME! <br> Inspector Ali</p>
+        </div>
+        
+      </div>
+      <!-- Sidebar content goes here -->
+      <a href="../../../dashboard.html">
+        <img src="../images/dashboard.svg" alt="Image 1">
+        Dashboard
+      </a>
+      <a  href="../../CRISS/case files/all cases/Allcases.html">
+        <img src="../images/casefile.svg" alt="Image 2">
+        Case files
+      </a>
+      <a href="../../dashboard.html">
+        <img src="../images/statistics.svg" alt="Image 3">
+        Statistics
+      </a>
+      <a  href="../investigation note/investignote.html">
+        <img  src="../images/investigation note.svg" alt="Image 4">
+        Investigation note
+      </a>
+      <a class="rescentcases" href="../Notification/notification.html">
+        <img src="../images/notrification.svg" alt="Image 5">
+        Notification
+      </a>
+      <a href="#">
+        <img src="../images/livestream.svg" alt="Image 6">
+        Live stream feed
+      </a>
+      <a href="../watch guard/watch-guard.html">
+        <img src="../images/eye.svg" alt="Image 7">
+        Watch guard
+      </a>
+      <a href="../wanted/wanted.html">
+        <img src="../images/wanted.svg" alt="Image 8">
+        Wanted List
+      </a>
+      <a href="../EvidenceM/evidencemanagement.html">
+        <img src="../images/evidence.svg" alt="Image 9">
+        Evidence Management
+      </a>
+      <a href="#">
+        <img src="../images/settings.svg" alt="Image 10">
+        Settings
+      </a>
+      <div style="text-align: center;" id ="logup">
+        <p>Are you sure you want to log out?</p>
+        <div style="display: flex; justify-content: center; text-align: center;" class="logop">
+          <a href="../../index.html">YES</a> <a href="">NO</a>
+      </div>
+      </div>
+  
+      <button onclick="active()" id="logout">log out</butto>
+     
+    </div>
+  
+
+  <section style="display: flex;" id="content">
+    <!-- Main content goes here -->
+      <div id="new-sidebar" class="image-container">
+      <a href="">  <img src="/CRISS/images/dashboard.svg" alt="Image 1"> </a>
+      <a href="">  <img src="/CRISS/images/casefile.png" alt="Image 3"> </a>
+      <a href="">  <img src="/CRISS/images/stats.png" alt="Image 4"> </a>
+      <a href="">  <img src="/CRISS/images/investigationnote.svg" alt="Image 5"> </a>
+      <a href="">  <img src="/CRISS/images/notification.svg" alt="Image 6"> </a>
+      <a href="">  <img src="/CRISS/images/livestream.svg" alt="Image 7"> </a>
+      <a href="">  <img src="/CRISS/images/watchguard.svg" alt="Image 8"> </a>
+      <a href=""> <img src="/CRISS/images/wanted.svg" alt="Image 9">
+      <a href="">  <img src="/CRISS/images/evidence.svg" alt="Image 10"> </a>
+      <a href="">  <img src="/CRISS/images/settings.svg" alt="" srcset=""> </a>
+      </div>
+  
+
+    <main style="flex-grow: 1;">
+        <h1>NOTIFICATIONS</h1>
+    
+       <form style="" >
+        <div class="form">
+            <div class="input">
+                <label  class="input-label" for="station"> Case Number</label>
+                <input type="text" name="station" id="station" class="hand" placeholder="District 56" required/>
+            </div>
+
+
+            <div class="input">
+                <label class="input-label" for="batchid">Notification Officer</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Name" required/>
+            </div>
+
+            <div class="input">
+                <label class="input-label" for="batchid">Date</label>
+                <input type="date" name="batchid" id="batchid" class="hand" placeholder="NFA45 645 23" required/>
+            </div>
+
+            <div class="input">
+                <label class="input-label" for="batchid">Notification Type</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Alert" required/>
+            </div>
+
+
+            <div class="input">
+                <label class="input-label" for="batchid">Notification Recipient</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="District 56" required/>
+            </div>
+
+            <div class="input">
+                <label class="input-label" for="batchid">Incident Description</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Robbery" required/>
+            </div>
+
+
+            <div class="input">
+                <label class="input-label" for="batchid">Case Reference</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="cold case" required/>
+            </div>
+
+             <div class="input">
+                <label class="input-label" for="batchid">Notification Note</label>
+                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Notification Note" required/>
+            </div>
+
+        </div>
+        <div class="button">
+           <button type="submit">Send notifiication</button></a>
+       </div>
+    </form>
+</main>
+</section>
+
+ 
+</html>
+
+  <script src="../case files/casefiles.js"></script>
+  <style>
+    /* Style for the aside element */
+   
+    .input{
+    display:flex;
+    flex-direction: column;
+    margin-right: 40%;
+    margin-block: 1rem;
+
+}
+
+input.hand {
+    background: #181B22;
+    color:  rgba(248, 241, 241, 0.7);
+    height: 60px;
+    border-radius: 6px;
+    border: none;
+    Padding: 5px 20px;
+    margin-top: 2.1%;
+    margin-left: 70px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+   
+}
+
+    .input-label{
+    font-size: 15px;
+    top: 5px;
+    left: 5px;
+    color:white;
+    margin-top: 2.5%;
+    margin-left: 65px;
+    Padding: 0px 20px;
+}
+
+.button button{
+    padding-block: 20px;
+    margin-inline: 25%;
+    margin-block: 2rem;
+    background-color: #181B22;
+    border: none;
+    color: white;
+    font-size: 17px;
+    border-radius: 2px;
+}
+
+h1{
+    color: white;
+    margin-inline: 25%;
+    margin-block: 1rem;
+}
+    
+ 
+  </style>
+</body>
+</html>
+
+    
+ 

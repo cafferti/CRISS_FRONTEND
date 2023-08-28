@@ -56,6 +56,8 @@ body{
     position: fixed;
     width: 100%;
     flex-grow: 1;
+    padding-block: 0.5rem;
+    background-color: var(--Grayish-Blue);
   }
 
   /* table styling */
@@ -274,7 +276,7 @@ body{
 #sidebar #logout{
   width: 100%;
   margin-bottom: 0;
-  margin-top: 4rem;
+  margin-top: 1.5rem;
 
   text-align: center;
   border: solid 1px rgb(2, 17, 24);
@@ -314,6 +316,7 @@ body{
 
 main{
   border-left: 0.1rem solid rgb(2, 17, 24);
+
 }
 
 /* code perculiar to only one page */
