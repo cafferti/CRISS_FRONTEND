@@ -73,12 +73,11 @@ const getSignUpInput = (event) =>{
          OfficerDetails.Station = Station
          OfficerDetails.BatchId = Batchid
          OfficerDetails.password = Password
-
+         console.log(OfficerDetails)
+         window.location.href = './signin.html';
          return OfficerDetails
         }
+        
       }
 }
-document.querySelector(`.navigate`).addEventListener(`click`, (event) =>{
-    getSignUpInput(event)
-})
 
