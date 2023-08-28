@@ -70,14 +70,22 @@ const getSignUpInput = (event) =>{
          OfficerDetails.name = Name
          OfficerDetails.email = Email
          OfficerDetails.rank = Rank
-         OfficerDetails.Station = Station
-         OfficerDetails.BatchId = Batchid
+         OfficerDetails.station = Station
+         OfficerDetails.batchId = Batchid
          OfficerDetails.password = Password
          console.log(OfficerDetails)
-         window.location.href = './signin.html';
+        //  window.location.href = './signin.html';
          return OfficerDetails
         }
         
       }
 }
+
+const sendingData = async (officerDetails) =>{
+  response = await fetch(`https://criss.onrender.com/api/users/`(
+    
+  ))
+  
+}
+document.querySelector(`.navigate`).addEventListener('click', getSignUpInput)
 
