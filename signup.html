@@ -36,18 +36,24 @@
             </div>
 
             <div class="input">
+                <label class="input-label" for="email">Batch ID</label>
+                <input type="email" name="email" id="batchid" class="hand" placeholder="NPF 3RT FKT" required/>
+            </div>
+
+            <div class="input">
                 <label  class="input-label" for="password">Password</label>
                 <input type="password" name="passward" id="password" class="hand" placeholder="Umar Baba" required/>
             </div>
 
             <div class="input">
                 <label  class="input-label" for="comfirm-password">Comfirm passward</label>
-                <input type="password" name="passward" id="conpassword" class="hand" placeholder="Umar Baba" required/>
+                <input type="password" name="passward" id="compassword" class="hand" placeholder="Umar Baba" required/>
             </div>
             
         </div>
+        <p style="color: red;" class="message"></p>
         <div class="button">
-             <a href="./signin.html"><button> Sign Up</button></a>
+             <a class="navigate" href="#"><button class="signbtn" > Sign Up</button></a>
         </div>
     </div>
     <script src="./Apis/signupapi.js" ></script>

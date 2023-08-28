@@ -96,3 +96,10 @@ h1 {
 .form{
     /* width: 200px; */
 }
+
+.disabled-link {
+    background-color: #57668a ;
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+}
