@@ -73,11 +73,11 @@ const getSignUpInput = () => {
     message.innerHTML = `please fill all Details`;
     return null;
   } else if (Password.length != 8) {
-    message.innerHTML = `password must be more than 8 characters`;
+    message.innerHTML = `<b>password must be more than 8 characters</b>`;
     return null;
   } else {
     if (Password != ConfirmPassword) {
-      message.innerHTML = `password dont match`;
+      message.innerHTML = `<b>password dont match<b>`;
       return null;
     } else {
       message.innerHTML = ``;
@@ -113,7 +113,7 @@ const sendingData = async (officerDetails) => {
         window.location.href = "./signin.html";
       }, 4000);
     } else {
-      message.innerHTML = `there ia an existing profile attached to this email`;
+      message.innerHTML = `<b>there ia an existing profile attached to this email</b>`;
       console.error("Login failed:", response.statusText);
     }
   } catch (error) {
