@@ -75,16 +75,19 @@ const getSignUpInput = () => {
   } else if (Password.length != 8) {
     message.innerHTML = `<b>password must be more than 8 characters</b>`;
     return null;
-  }if (
-    !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(Email)
-  ) {
+  }
+  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(Email)) {
     message.innerHTML = `<b>Please enter a Valid email</b>`;
     return null;
-  }if (!/^[A-Z]+-\d+$/.test(Batchid) || Batchid.length != 9  || Batchid != Batchid.toUpperCase()) {
+  }
+  if (
+    !/^[A-Z]+-\d+$/.test(Batchid) ||
+    Batchid.length != 9 ||
+    Batchid != Batchid.toUpperCase()
+  ) {
     message.innerHTML = `<b>Please enter a valid batch ID (e.g., NPF-44378)</b>`;
     return null;
-  }
-   else {
+  } else {
     if (Password != ConfirmPassword) {
       message.innerHTML = `<b>password dont match<b>`;
       return null;

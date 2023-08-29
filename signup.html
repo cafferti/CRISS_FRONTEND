@@ -13,13 +13,15 @@
     <img src="./image/Vector.png" alt="">
     
     <div id="container">
+       
         <div id="logo"><a href="index.html"><img class="L-img" src="./image/photo_2023-06-08_10-08-50-removebg-preview 3.png" alt=""></a> <h1>Sign Up</h1></div>
+        <main>
         <div class="form">
             <div class="input">
                 <label  class="input-label" for="name">Name</label>
                 <input type="text" name="name" id="name" class="hand" placeholder="Name" required/>
             </div>
-
+           
             <div class="input">
                 <label class="input-label" for="email">Email</label>
                 <input type="email" name="email" id="email" class="hand" placeholder="Umarbaba@gmail.com"   required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4} autocomplete="off" required/>
@@ -34,7 +36,11 @@
                 <label  class="input-label" for="station">Station</label>
                 <input type="text" name="station" id="station" class="hand" placeholder="Umar Baba" required/>
             </div>
+            </div>
 
+
+
+            <div>
             <div class="input">
                 <label class="input-label" for="email">Batch ID</label>
                 <input maxlength="9" type="email" name="email" id="batchid" class="hand" placeholder="NPF-12345" required/>
@@ -49,15 +55,17 @@
                 <label  class="input-label" for="comfirm-password">Comfirm passward</label>
                 <input maxlength="8" minlength="8" type="password" name="passward" id="compassword" class="hand" placeholder="comfirm-password" required pattern="[A-Z]+-\d+" required/>
             </div>
-            
+          </div>
         </div>
-        <p style="color: red; text-align: center; margin-right: 20%" class="message"></p>
-        <p style="color:white; text-align: center; margin-right: 20%" class="successmessage"></p>
+    </main>
         <div class="button">
         <div class="button">
              <a class="navigate"><button class="signbtn" > Sign Up</button></a>
         </div>
-    </div>
+       </div>
+       <p style="color: red; text-align: center; margin-right: 20%" class="message"></p>
+       <p style="color:white; text-align: center; margin-right: 20%" class="successmessage"></p>
+
     <script src="./Apis/signupapi.js" ></script>
 </body>
 </html>

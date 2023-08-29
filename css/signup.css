@@ -5,6 +5,7 @@
 }
 
 body {
+  overflow: hidden;
   max-width: 100%;
   height: 100vh;
   background: #141627;
@@ -20,13 +21,13 @@ img {
   margin-left: 50%;
 }
 #container {
+  overflow: hidden;
   box-sizing: border-box;
+  margin-inline: 15%;
+  margin-block: 10px;
   /* width: 100%; */
-  height: 100%;
-  margin: auto;
-  max-width: 60%;
-  margin-left: 340px;
-  padding: 20px;
+
+
   position: static;
 }
 .input {
@@ -38,7 +39,7 @@ img {
 input.hand {
   background: #181b22;
   color: rgba(248, 241, 241, 0.7);
-  width: 470px;
+  width: 350px;
   height: 65px;
   border-radius: 10px;
   border: 1px solid #4a4b52;
@@ -86,8 +87,10 @@ button {
   /* position:; */
 }
 #logo {
-  margin-left: 200px;
-  margin-bottom: 10px;
+  margin-left: 350px;
+  padding-top: 30px;
+  margin-bottom: -20px;
+  
 }
 h1 {
   margin-left: 60px;
@@ -105,4 +108,21 @@ h1 {
 }
 input.hand:-webkit-autofill {
   background: #181b22 !important;
+}
+
+.button{
+   margin-left: 255px;
+   margin-top: -200px;
+
+}
+
+main{
+    overflow: hidden;
+    display: flex;
+    padding-block: 10%;
+}
+
+.message,
+.successmessage{
+    margin-left: 10px;
 }
