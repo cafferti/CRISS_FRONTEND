@@ -30,7 +30,17 @@ disablelink = () => {
   }
 };
 
-setInterval(disablelink, 1000);
+const form = document.querySelector(".form");
+
+// Attach the event listener to the form
+form.addEventListener("input", () => {
+  disablelink();
+});
+
+// Call disablelink function on page load
+window.addEventListener("load", () => {
+  disablelink();
+});
 
 const getSignUpInput = () => {
   OfficerDetails = {
@@ -62,6 +72,9 @@ const getSignUpInput = () => {
   ) {
     message.innerHTML = `please fill all Details`;
     return null;
+  } else if (Password.length != 8) {
+    message.innerHTML = `password must be more than 8 characters`;
+    return null;
   } else {
     if (Password != ConfirmPassword) {
       message.innerHTML = `password dont match`;
@@ -81,6 +94,8 @@ const getSignUpInput = () => {
 };
 
 const sendingData = async (officerDetails) => {
+  const message = document.querySelector(`.message`);
+  const successmessage = document.querySelector(`.successmessage`);
   try {
     const response = await fetch(`https://criss.onrender.com/api/users/`, {
       method: `POST`,
@@ -92,7 +107,13 @@ const sendingData = async (officerDetails) => {
     if (response.ok) {
       officerDetails = await response.json();
       console.log(officerDetails);
+      successmessage.innerHTML = `<b>Creating Officer!...please wait..</b>`;
+      message.innerHTML = ``;
+      setTimeout(() => {
+        window.location.href = "./signin.html";
+      }, 4000);
     } else {
+      message.innerHTML = `there ia an existing profile attached to this email`;
       console.error("Login failed:", response.statusText);
     }
   } catch (error) {
@@ -101,16 +122,13 @@ const sendingData = async (officerDetails) => {
 };
 const executeSignup = async () => {
   officerDetails = await getSignUpInput();
-  if(officerDetails === null){
-    console.log(`unable to create user`)
-  }else{
-    sendingData(officerDetails)
-    // window.location.href = './signin.html';
-
+  if (officerDetails === null) {
+    console.log(`unable to create user`);
+  } else {
+    await sendingData(officerDetails);
   }
 };
-document.querySelector(`.navigate`).addEventListener("click", (event) =>{
-  event.preventDefault
-  executeSignup()
+document.querySelector(`.navigate`).addEventListener("click", async (event) => {
+  event.preventDefault(event);
+  await executeSignup();
 });
-

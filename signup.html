@@ -42,16 +42,18 @@
 
             <div class="input">
                 <label  class="input-label" for="password">Password</label>
-                <input type="password" name="passward" id="password" class="hand" placeholder="Umar Baba" required/>
+                <input minlength="8" maxlength="8" type="password" name="passward" id="password" class="hand" placeholder="8 character password" required/>
             </div>
 
             <div class="input">
                 <label  class="input-label" for="comfirm-password">Comfirm passward</label>
-                <input type="password" name="passward" id="compassword" class="hand" placeholder="Umar Baba" required/>
+                <input maxlength="8" minlength="8" type="password" name="passward" id="compassword" class="hand" placeholder="comfirm-password" required/>
             </div>
             
         </div>
-        <p style="color: red;" class="message"></p>
+        <p style="color: red; margin-inline: 32% " class="message"></p>
+        <p style="color:white; margin-inline: 32%;" class="successmessage"></p>
+        <div class="button">
         <div class="button">
              <a class="navigate"><button class="signbtn" > Sign Up</button></a>
         </div>
