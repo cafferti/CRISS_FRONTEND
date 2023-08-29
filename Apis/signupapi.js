@@ -75,12 +75,13 @@ const getSignUpInput = () => {
   } else if (Password.length != 8) {
     message.innerHTML = `<b>password must be more than 8 characters</b>`;
     return null;
-  }
-  if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(Email)) {
+  } else if (!/^[^\s]+(\s[^\s]+)$/.test(Name)) {
+    message.innerHTML = `<b>Please Input Surname</b>`;
+    return null
+  } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(Email)) {
     message.innerHTML = `<b>Please enter a Valid email</b>`;
     return null;
-  }
-  if (
+  } else if (
     !/^[A-Z]+-\d+$/.test(Batchid) ||
     Batchid.length != 9 ||
     Batchid != Batchid.toUpperCase()
@@ -117,6 +118,7 @@ const sendingData = async (officerDetails) => {
       body: JSON.stringify(officerDetails),
     });
     if (response.ok) {
+      message.innerHTML = `please Wait`
       officerDetails = await response.json();
       console.log(officerDetails);
       successmessage.innerHTML = `<b>Creating Officer!...please wait..</b>`;
