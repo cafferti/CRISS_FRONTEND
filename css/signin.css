@@ -5,6 +5,7 @@
 }
 
 body{
+    overflow: hidden;
     max-width: 100%;
     height: 100%;
     background: #141627;
@@ -26,7 +27,6 @@ img{
     margin: auto;
     max-width: 60%;
     margin-left: 340px;
-    padding: 20px;
     position:static;
 }
 .input{
@@ -39,12 +39,12 @@ input.hand{
     background: #181B22;
     color:  rgba(248, 241, 241, 0.7);
     width:470px ;
-    height: 85px;
+    height: 80px;
     border-radius: 10px;
     border: 1px solid #4A4B52;
     Padding: 5px 20px;
     padding-top: 30px;
-    margin-top: 4%;
+    margin-top: 2%;
     margin-left: 70px;
     font-weight: 400;
     font-size: 20px;
@@ -53,7 +53,7 @@ input.hand{
 
 .input-label{
     position: absolute;
-    top: 5px;
+    top: -5px;
     left: 5px;
     font-size: 15px;
     color:#606169;
@@ -80,28 +80,30 @@ button{
     
 }
 .L-img{
-    width: 68px;
-    height: 115px;
+    margin-top: 15px;
+    width: 40px;
+    height: 70px;
     margin-left: 0%;
     margin-bottom:30px;
     /* position:; */
 }
 #logo {
-    margin-left: 2px;
-    margin-bottom: 10px;
+    margin-inline: 41%;
+    margin-bottom: 5px;
+    padding-block: 10px;
 }
 h1 {
-    margin-left: 620px;
+    margin-left: 80px;
     padding-top: 20px;
     font-weight: 1100;
 }
 .icon{
     width: 100%;
     height: auto;
-    top: 60px;
+    top: 40px;
     left: 5px;
     /* position: absolute; */
-    margin-left: 440px;
+    margin-left: 460px;
 }
 .passwd-wrap{
     position: relative;
@@ -119,3 +121,20 @@ h1 {
     border: none ;
  
 }
+.loginbtnn{
+    position: absolute;
+    color: white; 
+    border-radius: 10px;
+    border: 1px solid #4a4b52;
+    background: #181b22;
+    margin-top: 100px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    padding: 10px;
+    text-decoration: none; 
+    margin-left: 1%;
+    margin-top: 1%;
+       
+  }
+  
