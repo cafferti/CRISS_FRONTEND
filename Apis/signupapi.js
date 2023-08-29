@@ -75,7 +75,13 @@ const getSignUpInput = () => {
   } else if (Password.length != 8) {
     message.innerHTML = `<b>password must be more than 8 characters</b>`;
     return null;
-  } else {
+  }if (
+    !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(Email)
+  ) {
+    message.innerHTML = `<b>Please enter a Valid email</b>`;
+    return null;
+  }
+   else {
     if (Password != ConfirmPassword) {
       message.innerHTML = `<b>password dont match<b>`;
       return null;
