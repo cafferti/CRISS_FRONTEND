@@ -80,6 +80,9 @@ const getSignUpInput = () => {
   ) {
     message.innerHTML = `<b>Please enter a Valid email</b>`;
     return null;
+  }if (!/^[A-Z]+-\d+$/.test(Batchid) || Batchid.length != 9  || Batchid != Batchid.toUpperCase()) {
+    message.innerHTML = `<b>Please enter a valid batch ID (e.g., NPF-44378)</b>`;
+    return null;
   }
    else {
     if (Password != ConfirmPassword) {
@@ -119,7 +122,7 @@ const sendingData = async (officerDetails) => {
         window.location.href = "./signin.html";
       }, 4000);
     } else {
-      message.innerHTML = `<b>there ia an existing profile attached to this email</b>`;
+      message.innerHTML = `<b>there ia an existing profile attached to this email or BatchID</b>`;
       console.error("Login failed:", response.statusText);
     }
   } catch (error) {
