@@ -22,23 +22,25 @@
 
             <div class="input">
                 <label class="input-label" for="batchid">Batch Id</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="NFA45 645 23" required/>
+                <input maxlength="9" type="text" name="batchid" id="batchid" class="hand" placeholder="NFA-56723" required/>
             </div>
 
             <div class="input password-wrap">
                 <label  class="input-label" for="password">Password</label>
                <button type="button" class="zee" id="show-password"> <img class="icon" src="./image/1.png" alt="show-password"></button>
-                <input type="password" name="passward" id="password" class="hand" placeholder="**********" required/>
+                <input maxlength="8" type="password" name="passward" id="password" class="hand" placeholder="**********" required/>
             </div>
 
             <div class="input">
                 <!-- <label  class="input-label" for="password"></label> -->
-                <input type="text" name="2fa" id="2fa" class="hand" placeholder="2FA" required/>
+                <input maxlength="8" type="password" name="2fa" id="2fa" class="hand" placeholder="2FA" required/>
             </div>
         </div>
+        <p class="errormessage" ></p>
         <div class="button">
-           <a  href="dashboard.html"> <button class="navigate " >Sign in</button></a>
+           <a> <button class="navigate " >Sign in</button></a>
        </div>
+      
     </div>
     <script src="./Apis/loginapi.js" ></script>
 </body>

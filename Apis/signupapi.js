@@ -73,7 +73,7 @@ const getSignUpInput = () => {
     message.innerHTML = `please fill all Details`;
     return null;
   } else if (Password.length != 8) {
-    message.innerHTML = `<b>password must be more than 8 characters</b>`;
+    message.innerHTML = `<b>password must be 8 characters</b>`;
     return null;
   } else if (!/^[^\s]+(\s[^\s]+)$/.test(Name)) {
     message.innerHTML = `<b>Please Input Surname</b>`;
