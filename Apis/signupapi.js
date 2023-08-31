@@ -30,10 +30,10 @@ disablelink = () => {
   }
 };
 
-const form = document.querySelector(".form");
+const form = document.querySelector(".main");
 
 // Attach the event listener to the form
-form.addEventListener("input", () => {
+form.addEventListener("keydown", () => {
   disablelink();
 });
 
@@ -109,6 +109,8 @@ const getSignUpInput = () => {
 const sendingData = async (officerDetails) => {
   const message = document.querySelector(`.message`);
   const successmessage = document.querySelector(`.successmessage`);
+  successmessage.innerHTML = `<b>creating officer...</b>`
+ 
   try {
     const response = await fetch(`https://criss.onrender.com/api/users/`, {
       method: `POST`,
@@ -117,6 +119,7 @@ const sendingData = async (officerDetails) => {
       },
       body: JSON.stringify(officerDetails),
     });
+   
     if (response.ok) {
       message.innerHTML = `please Wait`
       officerDetails = await response.json();
@@ -127,7 +130,9 @@ const sendingData = async (officerDetails) => {
         window.location.href = "./signin.html";
       }, 4000);
     } else {
-      message.innerHTML = `<b>there ia an existing profile attached to this email or BatchID</b>`;
+      successmessage.innerHTML = ``
+      message.innerHTML = `<b>There ia an existing profile attached to this email or BatchID</b>`;
+      
       console.error("Login failed:", response.statusText);
     }
   } catch (error) {
