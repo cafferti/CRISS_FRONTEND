@@ -71,13 +71,49 @@ const getInput = () => {
   }
 };
 
-const validateUser = async (data) => {
-  respose = await fetch(`https://criss.onrender.com/api/users/login/`, {
-    method: `POST`,
-    headers: {
-      "Content-type": `application/json`,
-    },
-    body: JSON.stringify(officerDetails),
+const validateUser = async (logindata) => {
+    const successmessage = document.querySelector(`.successmessage`);
+    const errormessage = document.querySelector(`.errormessage`);
+
+
+    errormessage.innerHTML = ``
+    successmessage.innerHTML =` <b>Processing....</b>`
+    const   response = await fetch(`https://criss.onrender.com/api/users/login/`, {
+        method: `POST`,
+        headers: {
+          "Content-type": `application/json`,
+        },
+        body: JSON.stringify(logindata),
+      });
+    try{
+if(response.ok){
+    successmessage.innerHTML = `login in...Please Wait..`
+    officerDetails = await response.Json(logindata)
+    console.log(officerDetails)
+    setTimeout(() => {
+        window.location.href = "./dashboard.html";
+      }, 4000);
+}else{
+    successmessage.innerHTML = ``
+      errormessage.innerHTML = `<b>Login Failed..User does  Not Exist</b>`;
+      console.error("Login failed:", response.statusText);
+}
+
+}catch (error) {
+    console.error("Network error:", error);
+  }};
+
+  const executelogin = async () =>{
+    officerDetails =  getInput()
+    if(officerDetails === null){
+        console.log(`Login failed`)
+    }else{
+     await validateUser(officerDetails)
+    }
+  }
+  
+  document.querySelector(`.navigate`).addEventListener("click", async (event) => {
+    event.preventDefault(event);
+    await executelogin();
   });
   
-};
