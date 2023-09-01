@@ -195,56 +195,61 @@
     <main style="flex-grow: 1;">
         <h1>NOTIFICATIONS</h1>
     
-       <form style="" >
+       <form>
         <div class="form">
+            
             <div class="input">
-                <label  class="input-label" for="station"> Case Number</label>
-                <input type="text" name="station" id="station" class="hand" placeholder="District 56" required/>
+                <label  class="input-label" for="casenum"> Case Reference Number</label>
+                <input type="text" name="casenum" id="casenum" class="hand" placeholder="Casefile 56" required/>
             </div>
 
 
             <div class="input">
-                <label class="input-label" for="batchid">Notification Officer</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Name" required/>
+                <label class="input-label" for="notofficer">Notifying Officer</label>
+                <input type="text" name="notofficer" id="notofficer" class="hand" placeholder="Name" required/>
             </div>
 
             <div class="input">
-                <label class="input-label" for="batchid">Date</label>
-                <input type="date" name="batchid" id="batchid" class="hand" placeholder="NFA45 645 23" required/>
+                <label class="input-label" for="date">Date</label>
+                <input type="date" name="date" id="date" class="hand" placeholder="NFA45 645 23" required/>
             </div>
 
             <div class="input">
-                <label class="input-label" for="batchid">Notification Type</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Alert" required/>
-            </div>
-
-
-            <div class="input">
-                <label class="input-label" for="batchid">Notification Recipient</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="District 56" required/>
-            </div>
-
-            <div class="input">
-                <label class="input-label" for="batchid">Incident Description</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Robbery" required/>
+                <label class="input-label" for="nottype">Notification Type</label>
+                <input type="text" name="nottype" id="nottype" class="hand" placeholder="Alert" required/>
             </div>
 
 
             <div class="input">
-                <label class="input-label" for="batchid">Case Reference</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="cold case" required/>
+                <label class="input-label" for="recipient">Notification Recipient</label>
+                <input type="text" name="recipient" id="recipient" class="hand" placeholder="District 56" required/>
             </div>
+
+            <div class="input">
+                <label class="input-label" for="incidentdes">Incident Description</label>
+                <input type="text" name="incidentdes" id="incidentdes" class="hand" placeholder="Robbery" required/>
+            </div>
+
 
              <div class="input">
-                <label class="input-label" for="batchid">Notification Note</label>
-                <input type="text" name="batchid" id="batchid" class="hand" placeholder="Notification Note" required/>
+                <label class="input-label" for="notification-content">Notification Content</label>
+                <input type="text" name="notification-content" id="notificationcon" class="hand" placeholder="Notification Note" required/>
             </div>
 
+            <div class="input">
+                <label class="input-label" for="addnote">Additional Notes</label>
+                <input type="text" name="addnote" id="addnote" class="hand" placeholder="cold case"/>
+            </div>
+
+
+
         </div>
+        <p class="errormessage" ></p>
         <div class="button">
-           <button type="submit">Send notifiication</button></a>
+           <button class="navigate " type="submit">Send notifiication</button></a>
        </div>
     </form>
+   
 </main>
 </section>
 
@@ -291,7 +296,7 @@ input.hand {
 .button button{
     padding-block: 20px;
     margin-inline: 25%;
-    margin-block: 2rem;
+    margin-block: 0rem 2rem;
     background-color: #181B22;
     border: none;
     color: white;
@@ -304,9 +309,24 @@ h1{
     margin-inline: 25%;
     margin-block: 1rem;
 }
+
+.button .disabled-link {
+    background-color: #0d0e0f;
+    color: #3e4449;
+    cursor: not-allowed;
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  .errormessage{
+    color: red;
+    margin-left: 25%;
+  }
+
     
  
   </style>
+  <script src="../../Apis/notification.js" ></script>
 </body>
 </html>
 
