@@ -42,8 +42,9 @@ const getInput = () => {
   let officerDetails = {
     station: ``,
     batchid: ``,
+    reversePassword: ``,
     password: ``,
-    AUpassword: ``,
+   
   };
 
   if (Station === `` || Station.length < 7) {
@@ -62,12 +63,13 @@ const getInput = () => {
     errormessage.innerHTML = ``;
     officerDetails = {
       station: Station,
-      batchid: Batchid,
+      batchId: Batchid,
+      reversePassword: AUpassword,
       password: Password,
-      uapassword: AUpassword,
+      
     };
 
-    console.log(officerDetails);
+    return officerDetails
   }
 };
 
@@ -88,7 +90,7 @@ const validateUser = async (logindata) => {
     try{
 if(response.ok){
     successmessage.innerHTML = `login in...Please Wait..`
-    officerDetails = await response.Json(logindata)
+    officerDetails = await response.json(logindata)
     console.log(officerDetails)
     setTimeout(() => {
         window.location.href = "./dashboard.html";
@@ -104,7 +106,7 @@ if(response.ok){
   }};
 
   const executelogin = async () =>{
-    officerDetails =  getInput()
+    officerDetails =   getInput()
     if(officerDetails === null){
         console.log(`Login failed`)
     }else{

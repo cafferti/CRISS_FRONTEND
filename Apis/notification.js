@@ -97,11 +97,11 @@ const getData = () => {
 
 const sendNotification = async (notedetails) => {
   const errormessage = document.querySelector(`.errormessage`);
-  const successmessage = document.querySelector(`.successmessage`);
+  const successmessage = document.querySelector(`.sucessmessage`);
 
   successmessage.innerHTML = `<b>Sending Notification........<b/>`;
   try {
-    const response = await fetch(`url`, {
+    const response = await fetch(`https://criss.onrender.com/api/notification/`, {
       method: `POST`,
       headers: {
         "Content-type": `application/json`,
@@ -110,11 +110,11 @@ const sendNotification = async (notedetails) => {
     });
     if (response.ok) {
       errormessage.innerHTML = ``;
-      notedetails = await response.JSON();
+      notedetails = await response.json();
       console.log(notedetails);
-      successmessage = `<b>Notification sent Succesfully...<b/>`;
+      successmessage.innerHTML = `<b>Notification sent Succesfully...<b/>`;
       setTimeout(() => {
-        successmessage = ``;
+        successmessage.innerHTML = ``;
       }, 300);
     } else {
       successmessage.innerHTML = ``;
