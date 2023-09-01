@@ -111,6 +111,7 @@ const sendingData = async (officerDetails) => {
   const successmessage = document.querySelector(`.successmessage`);
   successmessage.innerHTML = `<b>creating officer...</b>`
  
+  
   try {
     const response = await fetch(`https://criss.onrender.com/api/users/`, {
       method: `POST`,
