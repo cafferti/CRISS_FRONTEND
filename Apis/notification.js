@@ -99,6 +99,10 @@ disablelink = () => {
      }
   }
 
+ const sendNotification = async (notedetails)=>{
+  
+  }
+
  const submitbtn = document.querySelector(`.navigate`)
  submitbtn.addEventListener(`click`, (event)=>{
     event.preventDefault()
