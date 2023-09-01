@@ -39,7 +39,7 @@ disablelink = () => {
 const form = document.querySelector(".form");
 
 // Attach the event listener to the form
-form.addEventListener("keydown", () => {
+form.addEventListener("input", () => {
   disablelink();
 });
 
@@ -122,6 +122,9 @@ const sendNotification = async (notedetails) => {
       console.error("failed:", response.statusText);
     }
   } catch (error) {
+    successmessage.innerHTML = ``;
+    errormessage.innerHTML = `Check your Network Connection`;
+
     console.error("Network error:", error);
   }
 };
